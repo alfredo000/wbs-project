@@ -23,17 +23,17 @@
             </ul>
         </li>
           <li class="nav-item">
-            <a class="nav-link" {{ ($active === "categories")? 'active' : '' }} href="/categories">Bantuan</a>
+            <a class="nav-link" {{ ($active === "categories")? 'active' : '' }} href="/">Bantuan</a>
           </li>
         </ul>
           <ul class="navbar-nav ms-auto">
             <li>
               <div class="d-flex align-items-center">
-                <a class="nav-link" {{ ($active === "signin")? 'active' : '' }} href="/categories">
-                  <button class="btn btn-primary btn-sm px-3" style="border-radius: 10px;">Sign In</button></a>
+                <a class="nav-link" {{ ($active === "signin")? 'active' : '' }} href="/register">
+                  <button class="btn btn-primary btn-sm px-3" style="border-radius: 10px;">Register</button></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="font-weight: bold" {{ ($active === "login")? 'active' : '' }} href="/categories">Login</a>
+                <a class="nav-link" style="font-weight: bold" {{ ($active = "login")? 'active' : '' }} href="/login">Login</a>
               </div>
             </li>
           </ul>
