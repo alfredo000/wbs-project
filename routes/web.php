@@ -1,10 +1,12 @@
 <?php
 
 use App\Models\Post;
+use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Models\Category;
-use App\Models\User;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +34,12 @@ Route::get('/categories',function() {
         'categories' => Category::all()
     ]);
 });
-Route::get('/login',[PostController::class,'index']);
-Route::get('/signin',[PostController::class,'index']);
+
+Route::get('/login',[LoginController::class,'index']);
+
+Route::get('/register',[RegisterController::class,'index']);
+Route::post('/register',[RegisterController::class, 'store']);
+
 Route::get('/bantuan',[PostController::class,'index']);
 Route::get('/tatacarapengaduan',[PostController::class,'index']);
 Route::get('/alurpengaduan',[PostController::class,'index2']);
