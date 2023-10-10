@@ -1,0 +1,47 @@
+body{
+    background-color: salmon;
+}
+.logo-img{
+    width: 30px; 
+  margin-right: 10px; 
+  display: inline-block; 
+  vertical-align: middle; 
+}
+
+.card {
+  position: relative;
+  overflow: hidden; /* Agar elemen potong gambar yang berlebihan */
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto; /* Gambar akan menyesuaikan lebar container */
+}
+
+.card-content {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h5 {
+  font-size: 18px;
+}
+
+.card-content h2 {
+  font-size: 24px;
+}
+
+.card-content p {
+  font-size: 14px;
+}
+
+.btn-ajukan {
+  background-color: #FF2E00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+}
