@@ -19,19 +19,28 @@
               </div>
               @enderror
             </div>
+            <div class="form-floating">
+              <input type="email" name="email" class="form-control @error('email')is-invalid @enderror" id="email" placeholder="Email" required value="{{ old('email') }}">
+              <label for="email">Alamat Email</label>
+              @error('email')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+            @enderror
+            </div>
+            <div class="form-floating">
+              <input type="nomor_whatsapp" name="nomor_whatsapp" class="form-control @error('nomor_whatsapp')is-invalid @enderror" id="nomor_whatsapp" placeholder="Nomor_Whatsapp" required value="{{ old('nomor_whatsapp') }}">
+              <label for="nomor_whatsapp">Nomor Whatsapp</label>
+              @error('nomor_whatsapp')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+            @enderror
+            </div>
               <div class="form-floating">
                 <input type="text" name="username" class="form-control @error('username')is-invalid @enderror" id="username" placeholder="Username" required value="{{ old('username') }}">
                 <label for="username">Username</label>
                 @error('username')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
-              </div>
-              <div class="form-floating">
-                <input type="email" name="email" class="form-control @error('email')is-invalid @enderror" id="email" placeholder="Email" required value="{{ old('email') }}">
-                <label for="email">Email</label>
-                @error('email')
               <div class="invalid-feedback">
                 {{ $message }}
               </div>
@@ -46,7 +55,7 @@
               </div>
               @enderror
               </div>
-              <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Register</button>
+              <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Sign In</button>
             </form>
 
             <small class="d-block text-center mt-3">Sudah Memiliki Akun? <a href="/login">Login</a></small>

@@ -23,19 +23,38 @@
             </ul>
         </li>
           <li class="nav-item">
-            <a class="nav-link" {{ ($active === "categories")? 'active' : '' }} href="/">Bantuan</a>
+            <a class="nav-link" {{ ($active === "bantuan")? 'active' : '' }} href="#">Bantuan</a>
           </li>
         </ul>
+
           <ul class="navbar-nav ms-auto">
-            <li>
+            @auth
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Welcome {{ auth()->user()->name }}
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <form action="/logout" method="post">
+                  @csrf
+                  <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                </form>
+                </li>
+              </ul>
+            </li>
+            {{-- <li>
               <div class="d-flex align-items-center">
                 <a class="nav-link" {{ ($active === "signin")? 'active' : '' }} href="/register">
-                  <button class="btn btn-primary btn-sm px-3" style="border-radius: 10px;">Register</button></a>
-            </li>
+                  <button class="btn btn-primary btn-sm px-3" style="border-radius: 10px;">Sign In</button></a>
+            </li> --}}
+            @else
             <li class="nav-item">
-                <a class="nav-link" style="font-weight: bold" {{ ($active = "login")? 'active' : '' }} href="/login">Login</a>
+                <a class="nav-link" style="font-weight: bold" {{ ($active = "login")? 'active' : '' }} href="/login"><i class="bi bi-box-arrow-in-right"></i>Login</a>
               </div>
-            </li>
+            </li>      
+            @endauth
           </ul>
       </div>
     </div>
