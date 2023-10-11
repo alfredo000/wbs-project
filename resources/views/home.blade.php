@@ -15,7 +15,7 @@
         <div class="position-absolute p-5" style="color: white; top: 13%; left: 7.5%; transform: translate(-30%, -30%);">
             <h5>Selamat Datang di</h5>
         </div>
-            <h2 class="position-absolute p-5" style="color: white; top: 27%; left: 14%; transform: translate(-30%, -30%);">
+            <h2 class="position-absolute p-5" style="color: white; top: 15%; left: 1%;">
                 <b>Aviasi Whistleblowing System</b>
             </h2>
             <div class="col-6 px-5" style="position: absolute; bottom: 8%; left: 1%; color: white;font-size:14px;">
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div>
-            <button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);color: rgb(255, 255, 255); background-color: #FF2E00; position: absolute; bottom: 8%; right: 1.5%;">Ajukan Pengaduan</button>
+            <a href="ajukanpengaduan"><button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);color: rgb(255, 255, 255); background-color: #FF2E00; position: absolute; bottom: 8%; right: 1.5%;">Ajukan Pengaduan</button></a>
         </div>
     </div><br>
 
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-    <div class="row"style="padding-left:60px;padding-right:60px;padding-top:10px;margin-top: 8px; margin-bottom:8px;">
+    <div class="row"style="padding-left:60px;padding-right:60px;padding-top:10px;margin-top: 8px; padding-bottom:10px;">
         <div class="col-sm-4" style="display: flex">
           <div class="card" style="flex:1;color:#2C89BE;background-color:#EAFBFF;border:none;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
             <div class="card-body">
@@ -95,7 +95,7 @@
             </div>
           </div>
         </div>
-        <div class="row"style="padding-left:60px;padding-right:60px;padding-top:10px;margin-top: 8px; margin-bottom:20px;">
+        <div class="row"style="padding-left:60px;padding-right:60px;margin-top: 8px; margin-bottom:20px;">
             <div class="col-sm-4" style="display: flex">
               <div class="card" style="flex:1;color:#2C89BE;background-color:#EAFBFF;border:none;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="card-body">

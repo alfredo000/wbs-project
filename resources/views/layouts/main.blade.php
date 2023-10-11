@@ -12,7 +12,7 @@
   <body class="vh-100">
     @include('partials/navbar')
       <div class="container-fluid mt-4">
-          @yield('container')
+          @yield('container') 
       </div>
     @if (!isset($hideFooter) || !$hideFooter)
       @include('partials/footer')

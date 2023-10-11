@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav px-5">
           <li class="nav-item">
-            <a class="nav-link {{ ($active === "home")? 'active' : '' }}" href="/">Beranda</a>
+            <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ ($active === "aktivitassaya")? 'active' : '' }}" href="/aktivitassaya">Aktivitas Saya</a>
+            <a class="nav-link {{ Request::is('/aktivitassaya') ? 'active' : '' }}" href="/aktivitassaya">Aktivitas Saya</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,7 +23,7 @@
             </ul>
         </li>
           <li class="nav-item">
-            <a class="nav-link" {{ ($active === "bantuan")? 'active' : '' }} href="#">Bantuan</a>
+            <a class="nav-link"  href="#">Bantuan</a>
           </li>
         </ul>
 
@@ -34,7 +34,7 @@
                 Welcome {{ auth()->user()->name }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> My Profile</a></li>
+                <li><a class="dropdown-item" href="/dashboard" {{ Request::is('/myprofil') ? 'active' : '' }}><i class="bi bi-layout-text-window-reverse"></i> My Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <form action="/logout" method="post">
@@ -51,7 +51,7 @@
             </li> --}}
             @else
             <li class="nav-item">
-                <a class="nav-link" style="font-weight: bold" {{ ($active = "login")? 'active' : '' }} href="/login"><i class="bi bi-box-arrow-in-right"></i>Login</a>
+                <a class="nav-link" style="font-weight: bold" {{ Request::is('/login') ? 'active' : '' }} href="/login"><i class="bi bi-box-arrow-in-right"></i>Login</a>
               </div>
             </li>      
             @endauth

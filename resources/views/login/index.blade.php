@@ -1,9 +1,15 @@
 @php
     $hideFooter = true; // Atur ini untuk menyembunyikan footer
+    
 @endphp
 @extends('layouts.main')
-
 @section('container')
+<meta charset="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+      background: linear-gradient(135deg, #84D3FF,#48A1F4);
+  }
+</style>
 <div class="row justify-content-center">
     <div class="col-md-4">
 
