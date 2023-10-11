@@ -1,3 +1,6 @@
+@php
+    $hideFooter = true; // Atur ini untuk menyembunyikan footer
+@endphp
 @extends('layouts.main')
 
 @section('container')
