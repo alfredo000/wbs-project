@@ -35,15 +35,17 @@ Route::get('/categories',function() {
     ]);
 });
 
-Route::get('/login',[PostController::class,'index']);
-Route::get('/signin',[PostController::class,'index']);
+Route::get('/login',[LoginController::class,'index']);
+
+Route::get('/register',[RegisterController::class,'index']);
+Route::post('/register',[RegisterController::class, 'store']);
+
 Route::get('/bantuan',[PostController::class,'index']);
-Route::get('/tatacarapengaduan',[PostController::class,'index3']);
+Route::get('/tatacarapengaduan',[PostController::class,'index']);
 Route::get('/alurpengaduan',[PostController::class,'index2']);
 Route::get('/tentangwbs',[PostController::class,'index1']);
 Route::get('/aktivitassaya',[PostController::class,'index']);
 Route::get('/partials/footer', [PostController::class],'index');
 Route::get('partials/navbar',[PostController::class], 'index');
-
 
 
