@@ -44,5 +44,11 @@ class PostController extends Controller
             "active" => 'alurpengaduan',    
         ]);
     }
-    
+    public function index3()
+    {
+        return view('tatacarapengaduan',[
+            "title" => "Tata Cara Pengaduan",
+            "active" => 'tatacarapengaduan',    
+        ]);
+    }
 }
