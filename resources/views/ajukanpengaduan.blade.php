@@ -5,7 +5,7 @@
 @section('container')
 <div class="container">
     <div class="position-absolute" style="padding-top: 2%;padding-left:1%;">
-        <h6><b>Riwayat Pengaduan</b></h6>
+        <h6><b>Aktivitas Saya/Ajukan Pengaduan</b></h6>
     </div>
 </div>
 

@@ -11,14 +11,14 @@
     </style>
     <div class="card">
         <div class="card" style="position: relative; margin-top: -25px;">
-            <img src="img/kualanamu2.png" class="card-img-top" alt="#" style="background:rgba(0, 0, 0, 0.5);">
-        <div class="position-absolute p-5" style="color: white; top: 13%; left: 7.5%; transform: translate(-30%, -30%);">
+            <img src="img/kualanamu8.jpg" class="card-img-top" alt="#" style="height:400;width:100%;filter: brightness(0.6);">
+        <div class="position-absolute p-5" style="color: white; top: 10%; left: 7.5%; transform: translate(-30%, -30%);">
             <h5>Selamat Datang di</h5>
         </div>
-            <h2 class="position-absolute p-5" style="color: white; top: 15%; left: 1%;">
+            <h2 class="position-absolute p-5" style="color: white; top: 10%; left: 1%;">
                 <b>Aviasi Whistleblowing System</b>
             </h2>
-            <div class="col-6 px-5" style="position: absolute; bottom: 8%; left: 1%; color: white;font-size:14px;">
+            <div class="col-6 px-5" style="position: absolute; bottom: 14%; left: 1%; color: white;font-size:14px;">
                 Mari bersama-sama menciptakan Instansi yang jujur dan bersih. Laporkan setiap pelanggaran yang terjadi di lingkungan kerja.
             </div>
         </div>

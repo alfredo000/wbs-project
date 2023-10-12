@@ -24,7 +24,7 @@
 <div style="padding-top: 1%;">
     <div class="container px-4 py-2" style="font-size:14px;background-color: white;margin-top:-15px; display:flex; align-items:center;"> 
         <div class="table-responsive">
-            <table class="table table-striped table-md">
+            <table class="table table-striped table-md" style="width: 100%">
                 <thead>
                     <tr>
                         <th>Nama</th>
