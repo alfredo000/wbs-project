@@ -27,11 +27,13 @@
       </div>
       @endif
 
+      <div class="col-md" style="align-items:right">
         <main class="form-signin">
-            <h1 class="h3 mb-3 fw-normal text-center">Silahkan Login</h1>
+          <h5 style="text-align:center;text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);color:#0B49C0;">LOGIN</h5> 
             <form action="/login" method="post">
               @csrf
               <div class="form-floating">
+
                 <input type="username" name="username" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Username" autofocus required value="{{ old('username') }}">
                 <label for="username">Username</label>
                 @error('username')
@@ -40,15 +42,17 @@
                     </div>
                 @enderror
               </div>
-              <div class="form-floating">
+              <div class="form-floating" style="margin-top:10px;">
                 <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
                 <label for="floatingPassword">Password</label>
               </div>
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+              <button class="w-100 btn btn-lg btn-primary" type="submit" style="margin-top: 10px">Login</button>
             </form>
 
             <small class="d-block text-center mt-3">Don't Have an Account? <a href="/register">Sign In</a></small>
           </main>
+      </div>
+        
     </div>
 </div>
 

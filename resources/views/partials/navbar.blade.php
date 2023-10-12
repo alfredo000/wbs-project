@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container" style="color: #2C89BE">
-      <a class="navbar-brand" href="/">WBS</a>
+      <a class="navbar-brand" style="margin-left:-25px;" href="/">WBS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>   
@@ -27,7 +27,7 @@
           </li>
         </ul>
 
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto" style="margin-right:-25px">
             @auth
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
