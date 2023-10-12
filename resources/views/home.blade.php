@@ -103,8 +103,7 @@
                     <i style="padding-left:15px"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M26 21v-1a1 1 0 0 1 2 0v10h2V20a3.003 3.003 0 0 0-3-3a2.964 2.964 0 0 0-1.47.401a2.954 2.954 0 0 0-4-1A2.993 2.993 0 0 0 19 15a2.96 2.96 0 0 0-1 .185V10a3 3 0 0 0-6 0v11.105l-2.235-1.53v.001a2.999 2.999 0 0 0-3.882 4.55L12.323 30l1.347-1.478l-6.378-5.818A.99.99 0 0 1 7 22a1 1 0 0 1 1.6-.8l5.4 3.695V10a1 1 0 0 1 2 0v11h2v-3a1 1 0 0 1 2 0v3h2v-2a1 1 0 0 1 2 0v2Z"/><path fill="currentColor" d="M28 12h-6v-2h6V4H4v6h4v2H4a2.002 2.002 0 0 1-2-2V4a2.002 2.002 0 0 1 2-2h24a2.002 2.002 0 0 1 2 2v6a2.002 2.002 0 0 1-2 2Z"/></svg></i>
                     <b style="text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);padding-left: 10px">Bagaimana?</b></h5>
                   <p class="card-text" style="font-size:14px;margin-left: 20px">
-                    Apa perbuatan berindikasi tindak pidana
-                    korupsi/pelanggaran yang diketahui.</p>
+                    Bagaimana cara perbuatan tersebut dilakukan (modus, cara, dan sebagainya).</p>
                 </div>
               </div>
             </div>
@@ -115,7 +114,7 @@
                         <i style="padding-left: 15px"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 16 16"><path fill="currentColor" d="M9.5 7a1.5 1.5 0 1 0-3 0a1.5 1.5 0 0 0 3 0ZM14 7c0 2.874-3.097 6.016-4.841 7.558a1.74 1.74 0 0 1-2.318 0C5.097 13.016 2 9.874 2 7a6 6 0 1 1 12 0Zm-1 0A5 5 0 0 0 3 7c0 1.108.615 2.395 1.57 3.683c.934 1.258 2.087 2.377 2.933 3.126a.74.74 0 0 0 .994 0c.846-.749 2-1.867 2.933-3.126C12.385 9.395 13 8.108 13 7Z"/></svg></i>
                         <b style="text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);padding-left: 10px">Dimana?</b></h5>
                     <p class="card-text" style="font-size:14px;margin-left: 20px">
-                        Kapan waktu perbuatan tersebut dilakukan.</p>
+                        Dimana tempat terjadinya perbuatan tersebut dilakukan.</p>
                   </div>
                 </div>
               </div>
@@ -126,8 +125,7 @@
                         <i style="padding-left: 15px"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path fill="currentColor" d="M4.943 3a.5.5 0 0 1 .464.333l1.774 5a.5.5 0 0 1-.942.334L5.98 7.94V8H3.73l-.264.68a.5.5 0 1 1-.932-.36l1.935-5A.5.5 0 0 1 4.943 3Zm-.028 1.938L4.117 7h1.53l-.732-2.062Zm12.493-.409c-.246-.686-.604-1.106-1.053-1.328C15.945 3 15.522 3 15.246 3h-.027c-.554 0-.994.19-1.327.487c-.322.288-.521.656-.646.99a4.062 4.062 0 0 0-.245 1.288v.026L13 5.799v.026c0 .383 0 1.085.25 1.724c.13.335.334.67.656.936c.325.268.742.445 1.257.503c.417.046 1.663.013 2.23-1.246a.5.5 0 1 0-.911-.41c-.293.648-.93.693-1.208.662c-.344-.039-.571-.149-.73-.28a1.264 1.264 0 0 1-.363-.529c-.176-.45-.181-.981-.181-1.382V5.79l.003-.059a3.27 3.27 0 0 1 .18-.905c.09-.241.214-.45.375-.593c.15-.135.355-.233.66-.233c.304 0 .51.008.694.098c.158.078.371.257.555.769a.5.5 0 1 0 .941-.338Zm-5.935 1.307c.196-.267.32-.622.32-1.077c0-.376-.074-.696-.218-.96a1.44 1.44 0 0 0-.564-.57C10.605 3 10.165 3 10.003 3H8.5a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h1.75c.218 0 .662-.035 1.07-.271c.446-.26.798-.736.798-1.488c0-.383-.084-.71-.246-.977a1.445 1.445 0 0 0-.399-.428ZM10.521 4.1c.07.039.13.093.176.178c.049.089.096.236.096.48c0 .398-.15.544-.275.62a1.016 1.016 0 0 1-.495.122H9V4h1c.158 0 .361.01.52.1ZM9.364 6.5h.822c.187 0 .433.007.628.103c.087.043.154.1.204.18c.05.083.1.221.1.458c0 .384-.152.537-.301.623A1.203 1.203 0 0 1 10.25 8H9V6.5h.364Zm4.387 4.317a.5.5 0 1 0-.774-.634l-3.741 4.573l-1.882-1.882a.5.5 0 0 0-.708.707l2.273 2.273a.5.5 0 0 0 .74-.037l4.092-5Z"/></svg></i>
                         <b style="text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);padding-left: 10px">Bukti?</b></h5>
                     <p class="card-text" style="font-size:14px;margin-left: 20px">
-                        Siapa yang bertanggung jawab/terlibat dan 
-                        terkait dalam perbuatan tersebut.</p>
+                        Lengkapi dengan bukti permulaan (data, dokumen, gambar dan rekaman) yang mendukung.</p>
                   </div>
                 </div>
               </div>

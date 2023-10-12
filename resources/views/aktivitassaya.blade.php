@@ -19,7 +19,7 @@
         <h6><b>Riwayat Pengaduan</b></h6>
     </div>
     <div style="display:flex; justify-content: flex-end;padding-right:4%">
-        <button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);color: rgb(255, 255, 255); background-color: #FF2E00;">Ajukan Pengaduan</button>
+        <a href="ajukanpengaduan"><button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);color: rgb(255, 255, 255); background-color: #FF2E00;">Ajukan Pengaduan</button></a>
     </div>
 </div>
 <div style="padding-top: 50px">

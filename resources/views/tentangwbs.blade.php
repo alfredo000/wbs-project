@@ -54,13 +54,30 @@
             </p>
             <hr style="margin-left:50px; width:250px;border-top: 2px solid rgba(80, 80, 80, 0.3); margin-top: 5px;">
         </div>
-        <div class="row" style="padding-left:40px">
-            <div class="col-sm-3">
-                <div>
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24.879 9.879A3 3 0 0 1 30 12v24a3 3 0 0 1-6 0V19.236a3 3 0 0 1-4.121-4.357l5-5Zm2.504 1.197a1 1 0 0 0-1.09.217l-5 5a1 1 0 0 0 1.414 1.414l1.586-1.586a1 1 0 0 1 1.707.707V36a1 1 0 1 0 2 0V12a1 1 0 0 0-.617-.924Z" clip-rule="evenodd"/></svg></i>
+            <div class="row" style="padding-left:40px;padding-right:40px;text-align:justify;">
+                <div class="col">
+                    <div>
+                        <i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M24.879 9.879A3 3 0 0 1 30 12v24a3 3 0 0 1-6 0V19.236a3 3 0 0 1-4.121-4.357l5-5Zm2.504 1.197a1 1 0 0 0-1.09.217l-5 5a1 1 0 0 0 1.414 1.414l1.586-1.586a1 1 0 0 1 1.707.707V36a1 1 0 1 0 2 0V12a1 1 0 0 0-.617-.924Z" clip-rule="evenodd"/></svg></i>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h4 style="color:#2C89BE"><b style="font-size:20px;margin-left:-80%;text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); white-space:nowrap">
+                            WHAT</b>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <i style="margin-left:-80%;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256"><g transform="rotate(90 128 128)"><g fill="currentColor"><path d="M224 120h-48v88a8 8 0 0 1-8 8H88a8 8 0 0 1-8-8v-88H32l96-96Z" opacity=".2"/><path d="m229.66 114.34l-96-96a8 8 0 0 0-11.32 0l-96 96A8 8 0 0 0 32 128h40v80a16 16 0 0 0 16 16h80a16 16 0 0 0 16-16v-80h40a8 8 0 0 0 5.66-13.66ZM176 112a8 8 0 0 0-8 8v88H88v-88a8 8 0 0 0-8-8H51.31L128 35.31L204.69 112Z"/></g></g></svg></i>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <p style="margin-left:-100%;">Perbuatan berindikasi Tindak Pidana Korupsi/pelanggaran yang diketahui.</p>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 </div><br>
 
