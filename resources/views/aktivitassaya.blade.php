@@ -23,9 +23,15 @@
     </div>
 </div>
 <div style="padding-top: 50px">
+    @auth
+    <div style="text-align:center;">
+        <h6 style="font-size:14px">Anda belum mengajukan pengaduan</h6>
+    </div>
+    @else
     <div style="text-align:center;">
         <h6 style="font-size:14px">Silahkan <a href="login">Login</a> untuk melihat Aktivitas Saya</h6>
     </div>
+    @endauth
 </div>
 <br><br>
 <br><br>

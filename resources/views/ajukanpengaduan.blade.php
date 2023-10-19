@@ -47,98 +47,134 @@
     <div class="card container" style="border-radius:10px;align-items: justify;display: flex;">
         <div class="row">
             <div class="col-md-6"style="padding-left:40px;padding-right:60px;padding-top:10px;margin-top: 8px; padding-bottom:20px;">
-                <form action="proses.php" method="post" style="flex:1">
-                    <div class="form-group">
+                {{-- <form method="post" action="/aktivitassaya" class="mb-5"> --}}
+                <form method="POST" action="{{ route('aktivitassaya.store') }}" enctype="multipart/form-data">
+                    @csrf
+                    <div style="margin-bottom:25px;">
                         <p for="jenis_terlapor">Jenis Terlapor<span style="color: red"> *</span></p>
-                        <select id="jenis_terlapor" name="jenis_terlapor" required style="margin-top:-5px;height: 25px;">
-                            <option value="Option 1">Dewan Komisaris</option>
-                            <option value="Option 2">Dewan Direksi</option>
-                            <option value="Option 3">Selain Dewan Komisaris & Dewan Direksi</option>
+                        <select id="jenis_terlapor" name="jenis_terlapor"  style="margin-top:-5px;height: 25px; width: 100%;">
+                            <option value="Option 0" selected disabled>Pilih Jenis Terlapor</option>
+                            <option value="Dewan Komisaris">Dewan Komisaris</option>
+                            <option value="Dewan Direksi">Dewan Direksi</option>
+                            <option value="Selain Dewan Komisaris & Dewan Direksi">Selain Dewan Komisaris & Dewan Direksi</option>
+                        </select>
+                    </div>                    
+                    <div style="margin-bottom:10px;">
+                        <p for="lingkup" name="lingkup" style="margin-top:-15px;">Lingkup <span style="color: red;"> *</span></p>
+                        <select id="lingkup" name="lingkup"  style="margin-top:-5px;height: 25px; width: 100%;">
+                            <option value="Option 0" selected disabled>Pilih Lingkup</option>
+                            <option value="Benturan Kepentingan">Benturan Kepentingan</option>
+                            <option value="Gratifikasi">Gratifikasi</option>
+                            <option value="Pemerasan">Pemerasan</option>
+                            <option value="Penyalahgunaan Jabatan untuk Kepentingan Lain di Luar Perusahaan">Penyalahgunaan Jabatan untuk Kepentingan Lain di Luar Perusahaan</option>
+                            <option value="Penyimpangan dari Peraturan dan Perundang-undangan yang Berlaku">Penyimpangan dari Peraturan dan Perundang-undangan yang Berlaku</option>
+                            <option value="Penyimpangan dari Peraturan dan Perundang-undangan yang Berlaku">Penyimpangan dari Peraturan dan Perundang-undangan yang Berlaku</option>
                         </select>
                     </div>
-                    <script>
-                        document.getElementById("jenis_terlapor").addEventListener("change", function() {
-                            var selectedValue = this.value;
-                        });
-                    </script>                     
-                    <div class="form-group">
-                        <p for="lingkup" name="lingkup" style="margin-top:-15px;">Lingkup <span style="color: red;"> *</span></p>
-                        <input type="text" id="lingkup" name="lingkup" required style="margin-top:-10px;height: 25px;margin-bottom:-15px;">
+                    <div class="mb-3">
+                        <label for="judul" class="form-label">Judul<span style="color: red"> *</span></label>
+                        <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul"  value="{{ old('judul') }}">
+                        @error('judul')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                    <div class="form-group">
-                        <p for="judul">Judul<span style="color: red"> *</span></p></p>
-                        <input type="text" id="judul" name="judul" required style="margin-top:-25px;height: 25px;margin-bottom:-15px;">
-                    </div>
-        
                     <div class="form-group">
                         <p for="tanggal_kejadian">Tanggal Kejadian<span style="color: red"> *</span></p></p>
-                        <input type="date" id="tanggal_kejadian" name="tanggal_kejadian" required style="margin-top:-25px;height: 25px;margin-bottom:-15px;"> 
+                        <input type="date" id="tanggal_kejadian" name="tanggal_kejadian"  style="margin-top:-25px;height: 25px;margin-bottom:-15px;"> 
                     </div>
-        
                     <div class="form-group">
                         <p for="keterangan">Keterangan<span style="color: red"> *</span></p></p>
-                        <textarea id="keterangan" name="keterangan" rows="4" required style="margin-top:-25px;"></textarea>
+                        <textarea id="keterangan" name="keterangan" rows="4"  style="margin-top:-25px;"></textarea>
                     </div>
-                    <div class="form-group">
-                        <strong>Identitas Terlapor</strong>
-                        <p for="nama">Nama<span style="color: red"> *</span></p></p>
-                        <input type="text" id="nama" name="nama" required style="margin-top:-25px;height: 25px;margin-bottom:-15px;">
+
+                    <b>Identitas Terlapor</b>
+                    <div class="mb-3">
+                        <label for="nama"  class="form-label">Nama<span style="color: red"> *</span></label>
+                        <input type="text" class="form-control @error('nama_terlapor') is-invalid @enderror" id="nama_terlapor" name="nama_terlapor"  value="{{ old('nama_terlapor') }}">
+                        @error('nama')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                    <div class="form-group">
-                        <p for="jabatan">Jabatan<span style="color: red"> *</span></p></p>
-                        <input type="text" id="jabatan" name="jabatan" required style="margin-top:-25px;height: 25px;margin-bottom:-15px;">
+                    <div class="mb-3">
+                        <label for="jabatan" class="form-label">Jabatan<span style="color: red"> *</span></label>
+                        <input type="text" class="form-control" id="jabatan" name="jabatan_terlapor" >
                     </div>
-                    <div class="form-group">
-                        <p for="instansi">Instansi<span style="color: red"> *</span></p></p>
-                        <input type="text" id="instansi" name="instansi" required style="margin-top:-25px;height: 25px;margin-bottom:-15px;">
+                    <div class="mb-3">
+                        <label for="instansi" class="form-label">Instansi<span style="color: red"> *</span></label>
+                        <input type="text" class="form-control" id="instansi" name="instansi_terlapor" >
                     </div>
-                </form>
             </div>
             <div class="col-md-6"style="padding-left:40px;padding-right:60px;padding-top:10px;margin-top: 8px; padding-bottom:20px;">
                 <strong>Identitas Pelapor</strong>
-                <div class="form-group">
-                    <p for="nama2">Nama (Alias)<span style="color: red"> *</span></p>
-                    <input type="text" id="nama2" name="nama2" required style="margin-top:-10px;height: 25px;margin-bottom:-15px;">
-                </div>
-                <div class="form-group">
-                    <p for="nomoridentitas">Nomor Identitas</p>
-                    <input type="text" id="nomoridentitas" name="nomoridentitas" required style="margin-top:-10px;height: 25px;margin-bottom:-15px;">
-                </div>
-                <div class="form-group">
-                    <p for="nomorhandphone">Nomor Handphone</p>
-                    <input type="text" id="nomorhandphone" name="nomorhandphone" required style="margin-top:-10px;height: 25px;margin-bottom:-15px;">
-                </div>
-                <div class="form-group">
-                    <p for="email">Email</p>
-                    <input type="text" id="email" name="email" required style="margin-top:-10px;height: 25px;margin-bottom:-15px;">
-                </div>
-                <div class="form-group">
-                    <p for="instansi2">Instansi/Lembaga/Perusahaan</p>
-                    <input type="text" id="instansi2" name="instansi2" required style="margin-top:-10px;height: 25px;margin-bottom:-15px;">
-                </div>
-                <strong>Upload Bukti</strong><span style="color: red"> *</span>
-                <div class="form-group">
-                    <input type="text" id="tambahfile" name="tambahfile" required style="margin-top:5px;height: 25px;margin-bottom:-15px;" disabled>
-                </div>
-                <div class="form-group">
-                    <p for="judulfile">Judul File</p>
-                    <input type="text" id="judulfile" name="judulfile" required style="margin-top:-15px;height: 25px;margin-bottom:-15px;">
-                </div>
-                <div class="form-group">
-                    <input type="file" id="gambar" name="gambar" required style="height: auto;margin-bottom:-15px;font-size:14px;">
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); color: rgb(255, 255, 255); background-color: #FF2E00;">Tambah Bukti</button>
+                    <div class="mb-3">
+                        <label for="nama2" class="form-label">Nama (Alias)<span style="color: red"> *</span></label>
+                        <input type="text" class="form-control" id="nama_pelapor" name="nama_pelapor" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="nomor_identitas" class="form-label">Nomor Identitas</label>
+                        <input type="text" class="form-control" id="nomor_identitas" name="nomor_identitas">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nomorhandphone" class="form-label">Nomor Handphone</label>
+                        <input type="text" class="form-control" id="nomor_hp" name="nomor_hp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="instansi2" class="form-label">Instansi/Lembaga/Perusahaan</label>
+                        <input type="text" class="form-control" id="instansi2" name="instansi2">
+                    </div>
+                    <b>Upload Bukti</b><span style="color: red"> *</span>
+                    <div class="form-group" style="padding-top:2%">
+                        <textarea class="form-control" id="tambahfile" name="tambahfile" rows="5" disabled></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="judulfile" class="form-label">Judul File</label>
+                        <input type="text" class="form-control" id="judulfile" name="judulfile">
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-danger px-3" style="margin-top:-10px;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);color: rgb(255, 255, 255); background-color: #FF2E00;">Ajukan Pengaduan</button>
+                        <label for="gambar" class="form-label">Gambar</label>
+                        <input type="file" id="gambar" name="gambar" style="height: auto;margin-bottom:-15px;font-size:14px;">
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); color: rgb(255, 255, 255); background-color: #FF2E00;" id="btnTambahBukti">Tambah Bukti</button>
+                            <button type="submit" class="btn btn-danger px-3" style="margin-top:10px;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);color: rgb(255, 255, 255); background-color: #FF2E00;">Ajukan Pengaduan</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         
     </div>
 </div>
+
+<script>
+    document.getElementById('btnTambahBukti').addEventListener('click', function () {
+        var judulfile = document.getElementById('judulfile').value;
+        var gambar = document.getElementById('gambar').value;
+        var tambahfile = document.getElementById('tambahfile').value;
+
+        if (judulfile && gambar) {
+            // Jika sudah ada informasi sebelumnya, tambahkan yang baru ke informasi yang sudah ada
+            if (tambahfile) {
+                tambahfile += '\n <hr>';
+            }
+            tambahfile += 'Judul File: ' + judulfile + '\nNama File: ' + gambar.replace("C:\\fakepath\\", "");
+            
+            // Update nilai pada form-label 'tambahfile'
+            document.getElementById('tambahfile').value = tambahfile;
+        } else {
+            alert('Harap isi Judul File dan unggah gambar terlebih dahulu.');
+        }
+    });
+</script>
+
 
 @endsection

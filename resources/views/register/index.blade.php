@@ -47,6 +47,15 @@
               @enderror
               </div>
               <div class="form-floating">
+                <input type="text" name="instansi" class="form-control @error('instansi')is-invalid @enderror" id="instansi" placeholder="Instansi" required value="{{ old('instansi') }}">
+                <label for="instansi">Instansi/Perusahaan</label>
+                @error('instansi')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+              @enderror
+              </div>
+              <div class="form-floating">
                 <input type="password" name="password" class="form-control rounded-bottom @error('password')is-invalid @enderror" id="password" placeholder="Password" required>
                 <label for="password">Password</label>
                 @error('password')
@@ -55,7 +64,7 @@
               </div>
               @enderror
               </div>
-              <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Sign In</button>
+              <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Sign Up</button>
             </form>
 
             <small class="d-block text-center mt-3">Sudah Memiliki Akun? <a href="/login">Login</a></small>

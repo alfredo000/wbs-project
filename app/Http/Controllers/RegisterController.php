@@ -23,6 +23,7 @@ class RegisterController extends Controller
             'email' => 'required|email:dns|unique:users',
             'nomor_whatsapp' => 'required|min:10|max:13|unique:users',
             'username' => 'required|min:3|max:255|unique:users',
+            'instansi' => 'required|max:255',
             'password' => 'required|min:5|max:255'
         ]);
 
