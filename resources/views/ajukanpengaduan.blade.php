@@ -48,11 +48,11 @@
         <div class="row">
             <div class="col-md-6"style="padding-left:40px;padding-right:60px;padding-top:10px;margin-top: 8px; padding-bottom:20px;">
                 {{-- <form method="post" action="/aktivitassaya" class="mb-5"> --}}
-                <form method="POST" action="{{ route('aktivitassaya.store') }}" enctype="multipart/form-data">
+                <form method="POST" action="/ajukanpengaduan" enctype="multipart/form-data">
                     @csrf
                     <div style="margin-bottom:25px;">
                         <p for="jenis_terlapor">Jenis Terlapor<span style="color: red"> *</span></p>
-                        <select id="jenis_terlapor" name="jenis_terlapor"  style="margin-top:-5px;height: 25px; width: 100%;">
+                        <select id="jenis_terlapor" name="jenis_terlapor" required style="margin-top:-5px;height: 25px; width: 100%;">
                             <option value="Option 0" selected disabled>Pilih Jenis Terlapor</option>
                             <option value="Dewan Komisaris">Dewan Komisaris</option>
                             <option value="Dewan Direksi">Dewan Direksi</option>
@@ -61,7 +61,7 @@
                     </div>                    
                     <div style="margin-bottom:10px;">
                         <p for="lingkup" name="lingkup" style="margin-top:-15px;">Lingkup <span style="color: red;"> *</span></p>
-                        <select id="lingkup" name="lingkup"  style="margin-top:-5px;height: 25px; width: 100%;">
+                        <select id="lingkup" name="lingkup" required style="margin-top:-5px;height: 25px; width: 100%;">
                             <option value="Option 0" selected disabled>Pilih Lingkup</option>
                             <option value="Benturan Kepentingan">Benturan Kepentingan</option>
                             <option value="Gratifikasi">Gratifikasi</option>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="judul" class="form-label">Judul<span style="color: red"> *</span></label>
-                        <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul"  value="{{ old('judul') }}">
+                        <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" required value="{{ old('judul') }}">
                         @error('judul')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -82,17 +82,17 @@
                     </div>
                     <div class="form-group">
                         <p for="tanggal_kejadian">Tanggal Kejadian<span style="color: red"> *</span></p></p>
-                        <input type="date" id="tanggal_kejadian" name="tanggal_kejadian"  style="margin-top:-25px;height: 25px;margin-bottom:-15px;"> 
+                        <input type="date" id="tanggal_kejadian" name="tanggal_kejadian" required value="{{ old('tanggal_kejadian') }} style="margin-top:-25px;height: 25px;margin-bottom:-15px;"> 
                     </div>
                     <div class="form-group">
                         <p for="keterangan">Keterangan<span style="color: red"> *</span></p></p>
-                        <textarea id="keterangan" name="keterangan" rows="4"  style="margin-top:-25px;"></textarea>
+                        <textarea id="keterangan" name="keterangan" rows="4" required value="{{ old('keterangan') }} style="margin-top:-25px;"></textarea>
                     </div>
 
                     <b>Identitas Terlapor</b>
                     <div class="mb-3">
                         <label for="nama"  class="form-label">Nama<span style="color: red"> *</span></label>
-                        <input type="text" class="form-control @error('nama_terlapor') is-invalid @enderror" id="nama_terlapor" name="nama_terlapor"  value="{{ old('nama_terlapor') }}">
+                        <input type="text" class="form-control @error('nama_terlapor') is-invalid @enderror" id="nama_terlapor" name="nama_terlapor" required value="{{ old('nama_terlapor') }}">
                         @error('nama')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -101,18 +101,18 @@
                     </div>
                     <div class="mb-3">
                         <label for="jabatan" class="form-label">Jabatan<span style="color: red"> *</span></label>
-                        <input type="text" class="form-control" id="jabatan" name="jabatan_terlapor" >
+                        <input type="text" class="form-control @error('jabatan') is-invalid @enderror" id="jabatan" name="jabatan_terlapor" required value="{{ old('jabatan') }}">
                     </div>
                     <div class="mb-3">
                         <label for="instansi" class="form-label">Instansi<span style="color: red"> *</span></label>
-                        <input type="text" class="form-control" id="instansi" name="instansi_terlapor" >
+                        <input type="text" class="form-control @error('instansi') is-invalid @enderror" id="instansi" name="instansi_terlapor" required value="{{ old('tanggal_kejadian') }}">
                     </div>
             </div>
             <div class="col-md-6"style="padding-left:40px;padding-right:60px;padding-top:10px;margin-top: 8px; padding-bottom:20px;">
                 <strong>Identitas Pelapor</strong>
                     <div class="mb-3">
-                        <label for="nama2" class="form-label">Nama (Alias)<span style="color: red"> *</span></label>
-                        <input type="text" class="form-control" id="nama_pelapor" name="nama_pelapor" >
+                        <label for="nama_pelapor" class="form-label">Nama (Alias)<span style="color: red"> *</span></label>
+                        <input type="text" class="form-control @error('nama_pelapor') is-invalid @enderror" id="nama_pelapor" name="nama_pelapor" required value="{{ old('nama_pelapor') }}">
                     </div>
                     <div class="mb-3">
                         <label for="nomor_identitas" class="form-label">Nomor Identitas</label>
