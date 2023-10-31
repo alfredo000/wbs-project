@@ -23,6 +23,6 @@ class AktivitasUser extends Model
 
     public function pengaduan()
     {
-        return $this->belongsTo(Pengaduan::class);
+        return $this->hasMany(Pengaduan::class);
     }
 }

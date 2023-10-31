@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pengaduan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AjukanPengaduanController extends Controller
 {
@@ -40,6 +41,8 @@ class AjukanPengaduanController extends Controller
             'judul_file' => 'nullable',
             'gambar' => 'nullable'
         ]);
+
+        $data['user_id'] = Auth::id();
 
         $data['jenis_terlapor'] = $request->input('jenis_terlapor', 'Nilai Default atau Nilai yang Sesuai');
 

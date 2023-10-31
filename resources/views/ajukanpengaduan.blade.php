@@ -82,11 +82,11 @@
                     </div>
                     <div class="form-group">
                         <p for="tanggal_kejadian">Tanggal Kejadian<span style="color: red"> *</span></p></p>
-                        <input type="date" id="tanggal_kejadian" name="tanggal_kejadian" required value="{{ old('tanggal_kejadian') }} style="margin-top:-25px;height: 25px;margin-bottom:-15px;"> 
+                        <input type="date" id="tanggal_kejadian" name="tanggal_kejadian" required value="{{ old('tanggal_kejadian') }}" style="margin-top:-25px;height: 25px;margin-bottom:-15px;"> 
                     </div>
                     <div class="form-group">
                         <p for="keterangan">Keterangan<span style="color: red"> *</span></p></p>
-                        <textarea id="keterangan" name="keterangan" rows="4" required value="{{ old('keterangan') }} style="margin-top:-25px;"></textarea>
+                        <textarea id="keterangan" name="keterangan" rows="4" required value="{{ old('keterangan') }}" style="margin-top:-25px;"></textarea>
                     </div>
 
                     <b>Identitas Terlapor</b>
@@ -175,6 +175,5 @@
         }
     });
 </script>
-
 
 @endsection
