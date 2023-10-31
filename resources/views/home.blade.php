@@ -9,21 +9,28 @@
             padding: 0;
         }
     </style>
-    <div class="card">
+    <div class="card" style="position: relative;">
         <div class="card" style="position: relative; margin-top: -25px;">
-            <img src="img/kualanamu8.jpg" class="card-img-top" alt="#" style="height:400;width:100%;filter: brightness(0.6);">
-        <div class="position-absolute p-5" style="color: white; top: 10%; left: 7.5%; transform: translate(-30%, -30%);">
-            <h5>Selamat Datang di</h5>
-        </div>
-            <h2 class="position-absolute p-5" style="color: white; top: 10%; left: 1%;">
-                <b>Aviasi Whistleblowing System</b>
-            </h2>
-            <div class="col-6 px-5" style="position: absolute; bottom: 14%; left: 1%; color: white;font-size:14px;">
-                Mari bersama-sama menciptakan Instansi yang jujur dan bersih. Laporkan setiap pelanggaran yang terjadi di lingkungan kerja.
+            <img src="img/kualanamu8.jpg" class="card-img-top" alt="#" style="height: 260px; width: 100%; filter: brightness(0.6);">
+    
+            <div class="position-absolute p-5" style="color: white; top: 1%; left: 1%;">
+                <h5>Selamat Datang di</h5>
+            </div>
+            <div class="position-absolute p-5" style="color: white; top: 12%; left: 1%;">
+                <h2>
+                    <b>Aviasi Whistleblowing System</b>
+                </h2>
+            </div>
+            <div class="col-6 px-5" style="position: absolute; bottom: 14%; left: 1%; color: white;">
+                <h5 style="font-size: 14px;">Mari bersama-sama menciptakan Instansi yang jujur dan bersih. Laporkan setiap pelanggaran yang terjadi di lingkungan kerja.</h5>
             </div>
         </div>
         <div>
-            <a href="ajukanpengaduan"><button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);color: rgb(255, 255, 255); background-color: #FF2E00; position: absolute; bottom: 8%; right: 1.5%;">Ajukan Pengaduan</button></a>
+            <a href="ajukanpengaduan">
+                <button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7); color: rgb(255, 255, 255); background-color: #FF2E00; position: absolute; bottom: 15%; right: 5%;">
+                    Ajukan Pengaduan
+                </button>
+            </a>
         </div>
     </div><br>
 
