@@ -1,14 +1,13 @@
 <?php
 
-use App\Models\Post;
-use App\Models\User;
-use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\AjukanPengaduan;
+use App\Http\Controllers\AjukanPengaduanController;
+use App\Http\Controllers\AktivitasController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,15 +29,24 @@ Route::get('/', function () {
 Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::get('/register',[RegisterController::class,'index'])->middleware('guest');
+
 Route::post('/register',[RegisterController::class,'store']);
+
+// Route::get('/aktivitassaya/create', [AjukanPengaduanController::class, 'create'])->name('aktivitassaya.create');
+// Route::post('/aktivitassaya', [AjukanPengaduanController::class, 'store'])->name('aktivitassaya.store');
+Route::get('/aktivitassaya', [AktivitasController::class, 'index'])->name('aktivitassaya.index')->middleware('auth');
+Route::resource('aktivitassaya', AktivitasController::class);
+
+Route::get('/ajukanpengaduan/create', [AjukanPengaduanController::class, 'create'])->name('ajukanpengaduan.create');
+Route::post('/ajukanpengaduan',[AjukanPengaduanController::class,'store'])->name('ajukanpengaduan.store');
+Route::resource('/ajukanpengaduan', AjukanPengaduanController::class)->middleware('auth');
+
 Route::get('/bantuan',[PostController::class,'index']);
 Route::get('/tatacarapengaduan',[PostController::class,'index3']);
 Route::get('/alurpengaduan',[PostController::class,'index2']);
 Route::get('/tentangwbs',[PostController::class,'index1']);
-Route::get('/aktivitassaya',[PostController::class,'index']);
 Route::get('/partials/footer', [PostController::class],'index');
 Route::get('partials/navbar',[PostController::class], 'index');
-Route::get('ajukanpengaduan',[AjukanPengaduan::class,'index'])->middleware('auth');
-

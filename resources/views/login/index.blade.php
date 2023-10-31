@@ -45,7 +45,7 @@
               <button class="w-100 btn btn-lg btn-primary" type="submit" style="margin-top: 10px">Login</button>
             </form>
 
-            <small class="d-block text-center mt-3">Don't Have an Account? <a href="/register">Sign In</a></small>
+            <small class="d-block text-center mt-3">Don't Have an Account? <a href="/register">Sign Up</a></small>
           </main>
       </div>
         

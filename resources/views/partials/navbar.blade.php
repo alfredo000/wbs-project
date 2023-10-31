@@ -10,7 +10,7 @@
             <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('/aktivitassaya') ? 'active' : '' }}" href="/aktivitassaya">Aktivitas Saya</a>
+            <a class="nav-link {{ Request::is('/aktivitassaya*') ? 'active' : '' }}" href="/aktivitassaya">Aktivitas Saya</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
