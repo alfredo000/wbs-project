@@ -12,7 +12,7 @@ class AjukanPengaduanController extends Controller
     {
         $title = "Ajukan Pengaduan";
         $pengaduan = Pengaduan::all();
-        return view ('ajukanpengaduan', [
+        return view ('/pelapor/ajukanpengaduan', [
             'pengaduan' => $pengaduan
         ], compact('title'));
     }

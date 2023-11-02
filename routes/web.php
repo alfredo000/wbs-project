@@ -21,7 +21,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('home',[
+    return view('/pelapor/home',[
         "title"=>"Home"
     ]);
 });
@@ -37,16 +37,16 @@ Route::post('/register',[RegisterController::class,'store']);
 
 // Route::get('/aktivitassaya/create', [AjukanPengaduanController::class, 'create'])->name('aktivitassaya.create');
 // Route::post('/aktivitassaya', [AjukanPengaduanController::class, 'store'])->name('aktivitassaya.store');
-Route::get('/aktivitassaya', [AktivitasController::class, 'index'])->name('aktivitassaya.index')->middleware('auth');
-Route::resource('aktivitassaya', AktivitasController::class);
+Route::get('/pelapor/aktivitassaya', [AktivitasController::class, 'index'])->name('aktivitassaya.index')->middleware('auth');
+Route::resource('/pelapor/aktivitassaya', AktivitasController::class);
 
-Route::get('/ajukanpengaduan/create', [AjukanPengaduanController::class, 'create'])->name('ajukanpengaduan.create');
-Route::post('/ajukanpengaduan',[AjukanPengaduanController::class,'store'])->name('ajukanpengaduan.store');
-Route::resource('/ajukanpengaduan', AjukanPengaduanController::class)->middleware('auth');
+Route::get('/pelapor/ajukanpengaduan/create', [AjukanPengaduanController::class, 'create'])->name('ajukanpengaduan.create');
+Route::post('/pelapor/ajukanpengaduan',[AjukanPengaduanController::class,'store'])->name('ajukanpengaduan.store');
+Route::resource('/pelapor/ajukanpengaduan', AjukanPengaduanController::class)->middleware('auth');
 
-Route::get('/bantuan',[PostController::class,'index']);
-Route::get('/tatacarapengaduan',[PostController::class,'index3']);
-Route::get('/alurpengaduan',[PostController::class,'index2']);
-Route::get('/tentangwbs',[PostController::class,'index1']);
+Route::get('/pelapor/tatacarapengaduan',[PostController::class,'index3']);
+Route::get('/pelapor/alurpengaduan',[PostController::class,'index2']);
+Route::get('/pelapor/tentangwbs',[PostController::class,'index1']);
 Route::get('/partials/footer', [PostController::class],'index');
 Route::get('partials/navbar',[PostController::class], 'index');
+Route::get('/pelapor/bantuan',[PostController::class,'index']);

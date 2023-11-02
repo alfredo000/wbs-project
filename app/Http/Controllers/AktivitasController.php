@@ -16,6 +16,6 @@ class AktivitasController extends Controller
     {
         $pengaduans = Pengaduan::all();
         $title = "Aktivitas Saya";
-        return view('aktivitassaya', ['pengaduans' => $pengaduans], compact('title'));
+        return view('/pelapor/aktivitassaya', ['pengaduans' => $pengaduans], compact('title'));
     }
 }
