@@ -24,12 +24,15 @@
     </div>
     <div style="padding-top: 50px">
         @auth
-        @if ($pengaduans->isEmpty())
+        @php
+            $userPengaduans = $pengaduans->where('user_id', Auth::id());
+        @endphp
+        @if ($userPengaduans->isEmpty())
         <div style="text-align:center;">
             <h6 style="font-size:14px">Anda belum mengajukan pengaduan.</h6>
         </div>
         @else
-        <div style="text-align:center;">
+        <div style="text-align:center; padding-left: 25px; padding-right: 25px;">
         <table class="table table-bordered border-dark table-striped table-hover">
             <thead>
                 <tr>
@@ -37,19 +40,31 @@
                     <th scope="col">Tanggal</th>
                     <th scope="col">Judul</th>
                     <th scope="col">Jenis Terlapor</th>
+                    <th scope="col">Status</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($pengaduans as $index => $item)
+                @php
+                    $nomor = 1 // cara mengurutkan nomor sesuai pengajuan masing-masing user
+                @endphp
+                @foreach ($pengaduans as $item)
                 @if ($item->user_id === Auth::id())
                 <tr>
-                    <td>{{ $index + 1 }}</td>
-                    <td>{{ $item->created_at }}</td>
+                    <td>{{ $nomor }}</td>
+                    <td>{{ $item->created_at->format('d F Y') }}</td>
                     <td>{{ $item->judul }}</td>
                     <td>{{ $item->jenis_terlapor }}</td>
-                    <td><a href="{{ route('aktivitassaya.show', $item->id) }}" title="Detail"><i class="bi bi-exclamation-circle"></i></a></td>
+                    <td> </td>
+                    <td>
+                        <a href="{{ route('aktivitassaya.show', $item->id) }}" class="btn btn-primary btn-sm" title="Detail">
+                            <i class="bi bi-exclamation-circle"></i> Detail
+                        </a>
+                    </td>
                 </tr>
+                @php
+                    $nomor++; // Tambahkan 1 ke nomor untuk pengaduan berikutnya
+                @endphp
                 @endif
                 @endforeach
             </tbody>

@@ -8,15 +8,15 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('aktivitassaya',[
+        return view('/pelapor/aktivitassaya',[
             "title" => "Aktivitas Saya",
             "active" => 'aktivitassaya',    
         ]);
-        return view('tatacarapengaduan',[
+        return view('/pelapor/tatacarapengaduan',[
             "title" => "Tata Cara Pengaduan",
             "active" => 'tatacarapengaduan',    
         ]);
-        return view('bantuan',[
+        return view('/pelapor/bantuan',[
             "title" => "Bantuan",
             "active" => 'bantuan',    
         ]);
@@ -32,21 +32,21 @@ class PostController extends Controller
 
     public function index1()
     {
-        return view('tentangwbs',[
+        return view('/pelapor/tentangwbs',[
             "title" => "Tentang WBS",
             "active" => 'tentangwbs'
         ]);
     }
     public function index2()
     {
-        return view('alurpengaduan',[
+        return view('/pelapor/alurpengaduan',[
             "title" => "Alur Pengaduan",
             "active" => 'alurpengaduan',    
         ]);
     }
     public function index3()
     {
-        return view('tatacarapengaduan',[
+        return view('/pelapor/tatacarapengaduan',[
             "title" => "Tata Cara Pengaduan",
             "active" => 'tatacarapengaduan',    
         ]);

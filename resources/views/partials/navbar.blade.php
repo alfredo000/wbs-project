@@ -10,16 +10,16 @@
             <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('/aktivitassaya*') ? 'active' : '' }}" href="/aktivitassaya">Aktivitas Saya</a>
+            <a class="nav-link {{ Request::is('/pelapor/aktivitassaya*') ? 'active' : '' }}" href="/pelapor/aktivitassaya">Aktivitas Saya</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Informasi
             </a>
             <ul class="dropdown-menu" aria-labelledby="informasiDropdown">
-                <li><a class="dropdown-item" href="tentangwbs">Tentang WBS</a></li>
-                <li><a class="dropdown-item" href="alurpengaduan">Alur Pengaduan</a></li>
-                <li><a class="dropdown-item" href="tatacarapengaduan">Tata Cara Pengaduan</a></li>
+                <li><a class="dropdown-item" href="/pelapor/tentangwbs">Tentang WBS</a></li>
+                <li><a class="dropdown-item" href="/pelapor/alurpengaduan">Alur Pengaduan</a></li>
+                <li><a class="dropdown-item" href="/pelapor/tatacarapengaduan">Tata Cara Pengaduan</a></li>
             </ul>
         </li>
           <li class="nav-item">
@@ -34,7 +34,7 @@
                 Welcome {{ auth()->user()->name }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/dashboard" {{ Request::is('/myprofil') ? 'active' : '' }}><i class="bi bi-layout-text-window-reverse"></i> My Profile</a></li>
+                <li><a class="dropdown-item" href="/pelapor/dashboard" {{ Request::is('/myprofil') ? 'active' : '' }}><i class="bi bi-layout-text-window-reverse"></i> My Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <form action="/logout" method="post">
