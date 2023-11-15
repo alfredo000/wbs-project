@@ -1,14 +1,14 @@
-@extends('layouts/main')
-    @section('container')
+@extends('layouts.main')
+@section('container')
     <style>
         body {
             background-color: #F5F5F5;
         }
     </style>
 
-    <div class="card">
+    <div class="card" style="position: relative;">
         <div class="card" style="position: relative; margin-top: -25px;">
-            <img src="img/kualanamu2.png" class="card-img-top" alt="#" style="background:rgba(0, 0, 0, 0.5);">
+            <img src="{{ asset('img/kualanamu2.png') }}" class="card-img-top" alt="gambarAktivitasSaya" style=" background:rgba(0, 0, 0, 0.5);">
             <h2 class="position-absolute p-" style="color: white; top: 24%; left: 10%; transform: translate(-30%, -30%);">
                 <b>Aktivitas Saya</b>
             </h2>
@@ -57,7 +57,7 @@
                     <td>{{ $item->jenis_terlapor }}</td>
                     <td> </td>
                     <td>
-                        <a href="{{ route('aktivitassaya.show', $item->id) }}" class="btn btn-primary btn-sm" title="Detail">
+                        <a href="{{ route('aktivitassaya.show', $item->id) }}" class="btn btn-primary btn-sm" title="Detail Pengaduan">
                             <i class="bi bi-exclamation-circle"></i> Detail
                         </a>
                     </td>
@@ -72,7 +72,7 @@
         @endif
         @else
         <div style="text-align:center;">
-            <h6 style="font-size:14px">Silahkan <a href="login">Login</a> untuk melihat Aktivitas Saya</h6>
+            <h6 style="font-size:14px">Silahkan <a href="/login">Login</a> untuk melihat Aktivitas Saya</h6>
         </div>
         @endauth
     </div>

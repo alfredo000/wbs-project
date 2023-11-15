@@ -38,8 +38,8 @@ class AjukanPengaduanController extends Controller
             'nomor_hp' => 'nullable',
             'email' => 'nullable',
             'instansi_pelapor' => 'nullable',
-            'judul_file' => 'nullable',
-            'gambar' => 'nullable'
+            'judul_file' => 'required',
+            'gambar' => 'required|mimes:jpeg, jpg, png, pdf'
         ]);
 
         $data['user_id'] = Auth::id();

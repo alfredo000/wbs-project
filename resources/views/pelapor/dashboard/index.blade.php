@@ -18,7 +18,7 @@
         </h2>
     </div>
     <div>
-        <a href="ajukanpengaduan"><button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);color: rgb(255, 255, 255); background-color: #FF2E00; position: absolute; bottom: 20%; left: 5%;">Ajukan Pengaduan</button></a>
+        <a href="/pelapor/ajukanpengaduan"><button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);color: rgb(255, 255, 255); background-color: #FF2E00; position: absolute; bottom: 20%; left: 5%;">Ajukan Pengaduan</button></a>
     </div>
 </div><br>
 <div style="padding-top: 1%;">

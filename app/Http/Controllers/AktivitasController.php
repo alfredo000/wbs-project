@@ -18,4 +18,14 @@ class AktivitasController extends Controller
         $title = "Aktivitas Saya";
         return view('/pelapor/aktivitassaya', ['pengaduans' => $pengaduans], compact('title'));
     }
+
+    public function show($id)
+    {
+        $pengaduans = Pengaduan::find($id);
+        $title = "Detail Pengaduan";
+
+        // Tampilkan halaman detail pengaduan dengan data $pengaduan
+        return view('/pelapor/detailpengaduan', ['pengaduans' => $pengaduans], compact('title'));
+    }
+
 }
