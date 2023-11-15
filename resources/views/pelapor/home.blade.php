@@ -26,7 +26,7 @@
             </div>
         </div>
         <div>
-            <a href="ajukanpengaduan">
+            <a href="/pelapor/ajukanpengaduan">
                 <button type="button" class="btn btn-danger px-3" style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7); color: rgb(255, 255, 255); background-color: #FF2E00; position: absolute; bottom: 15%; right: 5%;">
                     Ajukan Pengaduan
                 </button>

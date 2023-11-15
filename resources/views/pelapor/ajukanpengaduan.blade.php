@@ -131,15 +131,17 @@
                         <input type="text" class="form-control" id="instansi2" name="instansi2">
                     </div>
                     <b>Upload Bukti</b><span style="color: red"> *</span>
-                    <div class="form-group" style="padding-top:2%">
-                        <textarea class="form-control" id="tambahfile" name="tambahfile" rows="5" disabled></textarea>
+                    <div class="form-group" style="padding-top:2%;">
+                        <ul id="daftarBukti" style="list-style-type: decimal;"></ul>
+                        {{-- <textarea class="form-control" id="tambahfile" name="tambahfile" rows="5" disabled> --}}
+                        </textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="judulfile" class="form-label">Judul File</label>
+                        <label for="judulfile" class="form-label">Judul File<span style="color: red"> *</span></label>
                         <input type="text" class="form-control" id="judulfile" name="judulfile">
                     </div>
                     <div class="form-group">
-                        <label for="gambar" class="form-label">Gambar</label>
+                        <label for="gambar" class="form-label">Gambar<span style="color: red"> *</span></label>
                         <input type="file" id="gambar" name="gambar" style="height: auto;margin-bottom:-15px;font-size:14px;">
                     </div>
                     <div class="row">
@@ -159,17 +161,17 @@
     document.getElementById('btnTambahBukti').addEventListener('click', function () {
         var judulfile = document.getElementById('judulfile').value;
         var gambar = document.getElementById('gambar').value;
-        var tambahfile = document.getElementById('tambahfile').value;
+        var daftarBukti = document.getElementById('daftarBukti');
 
         if (judulfile && gambar) {
-            // Jika sudah ada informasi sebelumnya, tambahkan yang baru ke informasi yang sudah ada
-            if (tambahfile) {
-                tambahfile += '\n <hr>';
-            }
-            tambahfile += 'Judul File: ' + judulfile + '\nNama File: ' + gambar.replace("C:\\fakepath\\", "");
+            // Buat elemen list item untuk bukti yang diunggah
+            var buktiItem = document.createElement('li');
             
-            // Update nilai pada form-label 'tambahfile'
-            document.getElementById('tambahfile').value = tambahfile;
+            buktiItem.innerHTML = 'Judul File: ' + judulfile + 'Nama File: ' + gambar.replace("C:\\fakepath\\", "");
+
+            // Tambahkan elemen list item ke daftar bukti
+            daftarBukti.appendChild(buktiItem);
+
         } else {
             alert('Harap isi Judul File dan unggah gambar terlebih dahulu.');
         }

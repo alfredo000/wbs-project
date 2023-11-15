@@ -7,7 +7,7 @@
 </style>
 <div class="card">
     <div class="card" style="position: relative; margin-top: -25px;">
-        <img src="img/kualanamu2.png" class="card-img-top" alt="#" style="background:rgba(0, 0, 0, 0.5);">
+        <img src="{{ asset('img/kualanamu2.png') }}" class="card-img-top" alt="#" style="background:rgba(0, 0, 0, 0.5);">
         <h2 class="position-absolute p-" style="color: white; top: 24%; left: 10%; transform: translate(-30%, -30%);">
             <b>Alur Pengaduan</b>
         </h2>
