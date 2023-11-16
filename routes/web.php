@@ -51,3 +51,11 @@ Route::get('/pelapor/tentangwbs',[PostController::class,'index1']);
 Route::get('/partials/footer', [PostController::class],'index');
 Route::get('partials/navbar',[PostController::class], 'index');
 Route::get('/pelapor/bantuan',[PostController::class,'index']);
+
+//Halaman Admin
+
+Route::get('/admin', function () {
+    return view('/admin/home',[
+        "title"=>"Home Admin"
+    ]);
+});

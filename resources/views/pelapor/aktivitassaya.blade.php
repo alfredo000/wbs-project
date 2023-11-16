@@ -8,8 +8,8 @@
 
     <div class="card" style="position: relative;">
         <div class="card" style="position: relative; margin-top: -25px;">
-            <img src="{{ asset('img/kualanamu2.png') }}" class="card-img-top" alt="gambarAktivitasSaya" style=" background:rgba(0, 0, 0, 0.5);">
-            <h2 class="position-absolute p-" style="color: white; top: 24%; left: 10%; transform: translate(-30%, -30%);">
+            <img src="{{ asset('img/kualanamu6.jpg') }}" class="card-img-top" alt="gambarAktivitasSaya" style="height: 260px; width: 100%; filter: brightness(0.4);">
+            <h2 class="position-absolute" style="color: white; top: 24%; left: 10%; transform: translate(-30%, -30%);">
                 <b>Aktivitas Saya</b>
             </h2>
         </div>
